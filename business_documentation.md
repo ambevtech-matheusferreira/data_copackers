@@ -34,9 +34,10 @@ No organograma devem ser representadas todas as **pessoas** e **áreas** importa
 
 Exemplos:
   Sponsor 
-  Brewtech Tribo Produto Perfeito, 
-    Gerente: [nome] ([email])
-    PO: [nome] ([email])
+  Brewtech Integration, 
+    Gerente: ([Bruna Carla Santos Silveira]) ([99816467@ambev.com.br])
+    PO: [Filippo Simoes Ferrari] ([99808568@ambev.com.br])
+    Estag: ([Matheus Ferreira Silva]) ([99826089@ambev.com.br])
   
   CENG
     Diretor: [nome] ([email])
@@ -54,26 +55,28 @@ Exemplos:
 
 A motivação deve ser a descrição das **dores** relatadas pelo cliente, tendo como foco o problema e as variáveis envolvidas. 
 
-Exemplos: 
-  "Eu perco tempo fazendo o double check da contagem de garrafeiras que passam pela despaletizadora pois o contador não é confiável como SSOT"
+  "Não temos uma base consistente dos copackers no Brasil, assim perdemos muitas horas pprocurando copackers seja via internet ou rede de contatos."
 
 ### Descrição do problema
 
 A descrição do problema deve ser feita em termos gerais, utilizando a linguagem do negócio. Não há necessidade de interpretá-lo como um problema de dados neste momento. 
 
-Exemplos:
-  "Perda de tempo fazendo double check de dado do contador da despaletizadora"
+"Perda de tempo procurando copackers."
 
 ### Solução corrente
 
 A solução corrente é a forma como o negócio resolve o problema atualmente ou algum outro *benchmark* que pode ser usado como referência. Esta etapa é importante para ser utilizada como *baseline* para a nova solução que será proposta.
 
-Exemplos:
-  "O double check é feito pela supervisora de linha contando as garrafeiras pela gravação do vídeo da área da despaletizadora"
+"Atualmente temos uma empresa contratada para fazer a prospecção de copackers."
 
 ### Objetivo principal
 
 O objetivo principal pode ser entendido também como objetivo final e estar atrelado a algum KPI conhecido. 
+
+- Diminuir tempo procurando copackers
+- Ter base de copackers consolidada. 
+****
+
 
 Exemplos:
   - Diminuir rotina operacional;
@@ -91,6 +94,11 @@ Exemplos:
 
 Quando o objetivo principal é muito complexo, é interessante determinar objetivos secundários para dar um direcionamento de como o objetivo principal pode ser atingido.
 
+-Ter a lista de empresas fabricantes de bebidas no Brasil consolidada. 
+-Ter todas as opções de empresas que podem ser copackers. 
+
+
+
 Exemplos:
   - Identificar comentários relacionados aos produtos da ambev;
   - Definir qual é a parametrização ideal da lavadora para que a quantidade de garrafas rejeitadas seja a menor possível;
@@ -101,6 +109,8 @@ Exemplos:
 
 É a tradução do objetivo de negócio definido acima em problemas de dados, ou seja, uma descrição de como o problema poderia ser resolvido através do uso de dados. As hipóteses descritas nesta seção serão o objeto de investigação do Cientista de Dados nas próximas etapas. Para melhores descrições, verifique o item 1.3 do CRISP-DM (*Determine data mining goals*).
 
+- É possível aumentar a base de copackers em 15% através da base de dados?
+
 Exemplos:
 - É possível identificar os pallets através da imagem? 
 - É possível realizar a contagem de pallets identificados em um vídeo?
@@ -108,6 +118,9 @@ Exemplos:
 ### Riscos e contingências
 
 Aqui é importante listar todos os riscos do projeto, sejam eles de negócio (surgiu uma nova solução de mercado), financeiros (o custo da solução pode aumentar se for necessário utilizar abordagens mais complexas), técnicos (a infraestrutura atual não suporta a solução proposta), da dados (os dados não tem qualidade suficiente para atingir o objetivo), etc
+
+
+- É possível que a base de dados não seja assertiva para encontrarmos os copackers. 
 
 Exemplos:
 - É possível que a solução proposta não seja suficiente e abodagens mais sofisticadas sejam ser necessárias;
@@ -117,6 +130,9 @@ Exemplos:
 ### Requisitos
 
 Aqui devem ser listados as condições necessárias para que a solução funcione conforme o esperado para atingir o objetivo de negócio.
+
+- A solução precisa entregar as empresas de fabricação de bebida em nível Brasil. 
+- 
 
 Exemplos:
 - a solução precisa funcionar em tempo real;
@@ -128,6 +144,9 @@ Exemplos:
 ### Fontes de dados
 
 Nesta seção precisam estar listadas todas as fontes de dados necessárias para o desenvolvimento da solução bem como toda informação necessária para seu uso. 
+
+- IRIS
+- 
 
 Informações desejáveis:
 - Nome da fonte: Ceres, MES ATHENA, LMS, SAP transação MZ01, vídeo de cameras, sistema supervisório, PLC;
