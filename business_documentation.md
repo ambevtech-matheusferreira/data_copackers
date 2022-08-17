@@ -32,24 +32,12 @@ Sumário:
 
 No organograma devem ser representadas todas as **pessoas** e **áreas** importantes para o projeto. O requisito mínimo para este item é que sejam identificados os ***sponsors***  e o **cliente / usuário final**. É importante que o nome e o email destas pessoas também sejam registrados.
 
-Exemplos:
   Sponsor 
   Brewtech Integration, 
     Gerente: ([Bruna Carla Santos Silveira]) ([99816467@ambev.com.br])
     PO: [Filippo Simoes Ferrari] ([99808568@ambev.com.br])
     Estag: ([Matheus Ferreira Silva]) ([99826089@ambev.com.br])
   
-  CENG
-    Diretor: [nome] ([email])
-    Especialista de negócio: [nome] ([email])
-
-  ITF cervejaria UB
-    Diretor: [nome] ([email])
-
-  Cliente:
-    Operador: [nome] ([email])
-    Técnico de automação: [nome] ([email])
-    Especialista CENG: [nome] ([email])
 
 ### Motivação
 
@@ -61,7 +49,7 @@ A motivação deve ser a descrição das **dores** relatadas pelo cliente, tendo
 
 A descrição do problema deve ser feita em termos gerais, utilizando a linguagem do negócio. Não há necessidade de interpretá-lo como um problema de dados neste momento. 
 
-"Perda de tempo procurando copackers."
+"Dificuldade de encontrar copackers, inviabilizando produções que a ambev não é capaz de atender."
 
 ### Solução corrente
 
@@ -75,20 +63,13 @@ O objetivo principal pode ser entendido também como objetivo final e estar atre
 
 - Diminuir tempo procurando copackers
 - Ter base de copackers consolidada. 
-****
 
 
-Exemplos:
-  - Diminuir rotina operacional;
-  - Aumentar eficiência;
-  - Medir a qualidade percebida pelos clientes através das redes sociais.
+Métricas de sucesso
 
-Métrica de sucesso
+-Aumentar em 15% a base de copackers.
 
-Exemplos: 
-  - quantidade de lotes fora de especificação;
-  - LEF;
-  - OAE.
+
 
 ### Objetivos secundários
 
@@ -99,21 +80,13 @@ Quando o objetivo principal é muito complexo, é interessante determinar objeti
 
 
 
-Exemplos:
-  - Identificar comentários relacionados aos produtos da ambev;
-  - Definir qual é a parametrização ideal da lavadora para que a quantidade de garrafas rejeitadas seja a menor possível;
-  - Fornecer dados para o operador tomar a decisão;
-
-
 ### Hipóteses
 
 É a tradução do objetivo de negócio definido acima em problemas de dados, ou seja, uma descrição de como o problema poderia ser resolvido através do uso de dados. As hipóteses descritas nesta seção serão o objeto de investigação do Cientista de Dados nas próximas etapas. Para melhores descrições, verifique o item 1.3 do CRISP-DM (*Determine data mining goals*).
 
 - É possível aumentar a base de copackers em 15% através da base de dados?
 
-Exemplos:
-- É possível identificar os pallets através da imagem? 
-- É possível realizar a contagem de pallets identificados em um vídeo?
+
 
 ### Riscos e contingências
 
@@ -122,10 +95,6 @@ Aqui é importante listar todos os riscos do projeto, sejam eles de negócio (su
 
 - É possível que a base de dados não seja assertiva para encontrarmos os copackers. 
 
-Exemplos:
-- É possível que a solução proposta não seja suficiente e abodagens mais sofisticadas sejam ser necessárias;
-- É possível que os dados não tenham qualidade suficiente para o desenvolvimento da solução;
-- É possível que a base de dados não tenha o volume necessário para o treinamento do modelo.
 
 ### Requisitos
 
@@ -134,11 +103,6 @@ Aqui devem ser listados as condições necessárias para que a solução funcion
 - A solução precisa entregar as empresas de fabricação de bebida em nível Brasil. 
 - 
 
-Exemplos:
-- a solução precisa funcionar em tempo real;
-- a solução precisa se conectar com o sistema X;
-- o modelo precisa estar disponível para consulta conforme a requisição do usuário;
-- é necessário disponibilizar a explicação do output feito pelo modelo;
 
 
 ### Fontes de dados
@@ -148,14 +112,6 @@ Nesta seção precisam estar listadas todas as fontes de dados necessárias para
 - IRIS
 - 
 
-Informações desejáveis:
-- Nome da fonte: Ceres, MES ATHENA, LMS, SAP transação MZ01, vídeo de cameras, sistema supervisório, PLC;
-- Acesso: Disponível na Iris, Através do SODA, requer ingestão de dados, etc;
-- Revisão de LGPD: pendente;
-- Periodicidade da consulta: mensal, semanal, diária, real-time;
-- Formato: tabular, NoSQL, arquivo;
-- Requer serviços adicionais: anotação do label, anotação POS tagging, segmentação de objetos, etc;
-- Outras informações relevantes: é preciso comprar usuário para acessar o sistema, os dados devem ser comprados por um serviço X, os dados são de fonte pública, é necessário coletar dados através de scrapping, etc;
 
 
 ### Valuation
@@ -165,6 +121,18 @@ Descrever qual é o retorno esperado caso o objetivo seja atingido por completo 
 Caso a memória de cálculo seja muito complexa, deixe um resumo registrado neste documento e o link para o arquivo onde o cálculo foi feito.
 
 Além da descrição acima, é importante registrar o nome das pessoas de negócio que participaram da criação da estimativa, referência para emails trocados ou alguma outra comprovação da concordância entre as partes.
+
+
+
+
+Se objetivo for atendido, provavelmente eliminariamos um custo mensal de aproximadamente 11k/mês, com a empresa terceira que faz a prospecção para nós. 
+
+![image](https://user-images.githubusercontent.com/110915069/185122196-4c224dc7-eda2-4b8c-adf7-7c3e16785b37.png)
+
+![image](https://user-images.githubusercontent.com/110915069/185125149-368437ee-cc2e-4a5e-a337-2bce5132add2.png)
+
+
+E-mail de negociação com a empresa terceira. 
 
 
 --------------------------------------------------------
