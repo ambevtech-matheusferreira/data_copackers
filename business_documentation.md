@@ -30,7 +30,6 @@ Sumário:
 
 ### Organograma
 
-No organograma devem ser representadas todas as **pessoas** e **áreas** importantes para o projeto. O requisito mínimo para este item é que sejam identificados os ***sponsors***  e o **cliente / usuário final**. É importante que o nome e o email destas pessoas também sejam registrados.
 
   Sponsor 
   Brewtech Integration, 
@@ -41,25 +40,21 @@ No organograma devem ser representadas todas as **pessoas** e **áreas** importa
 
 ### Motivação
 
-A motivação deve ser a descrição das **dores** relatadas pelo cliente, tendo como foco o problema e as variáveis envolvidas. 
 
   "Não temos uma base consistente dos copackers no Brasil, assim perdemos muitas horas pprocurando copackers seja via internet ou rede de contatos."
 
 ### Descrição do problema
 
-A descrição do problema deve ser feita em termos gerais, utilizando a linguagem do negócio. Não há necessidade de interpretá-lo como um problema de dados neste momento. 
 
 "Dificuldade de encontrar copackers, inviabilizando produções que a ambev não é capaz de atender."
 
 ### Solução corrente
 
-A solução corrente é a forma como o negócio resolve o problema atualmente ou algum outro *benchmark* que pode ser usado como referência. Esta etapa é importante para ser utilizada como *baseline* para a nova solução que será proposta.
 
 "Atualmente temos uma empresa contratada para fazer a prospecção de copackers."
 
 ### Objetivo principal
 
-O objetivo principal pode ser entendido também como objetivo final e estar atrelado a algum KPI conhecido. 
 
 - Diminuir tempo procurando copackers
 - Ter base de copackers consolidada. 
@@ -73,7 +68,6 @@ Métricas de sucesso
 
 ### Objetivos secundários
 
-Quando o objetivo principal é muito complexo, é interessante determinar objetivos secundários para dar um direcionamento de como o objetivo principal pode ser atingido.
 
 -Ter a lista de empresas fabricantes de bebidas no Brasil consolidada. 
 -Ter todas as opções de empresas que podem ser copackers. 
@@ -82,7 +76,6 @@ Quando o objetivo principal é muito complexo, é interessante determinar objeti
 
 ### Hipóteses
 
-É a tradução do objetivo de negócio definido acima em problemas de dados, ou seja, uma descrição de como o problema poderia ser resolvido através do uso de dados. As hipóteses descritas nesta seção serão o objeto de investigação do Cientista de Dados nas próximas etapas. Para melhores descrições, verifique o item 1.3 do CRISP-DM (*Determine data mining goals*).
 
 - É possível aumentar a base de copackers em 15% através da base de dados?
 
@@ -90,7 +83,6 @@ Quando o objetivo principal é muito complexo, é interessante determinar objeti
 
 ### Riscos e contingências
 
-Aqui é importante listar todos os riscos do projeto, sejam eles de negócio (surgiu uma nova solução de mercado), financeiros (o custo da solução pode aumentar se for necessário utilizar abordagens mais complexas), técnicos (a infraestrutura atual não suporta a solução proposta), da dados (os dados não tem qualidade suficiente para atingir o objetivo), etc
 
 
 - É possível que a base de dados não seja assertiva para encontrarmos os copackers. 
@@ -98,7 +90,6 @@ Aqui é importante listar todos os riscos do projeto, sejam eles de negócio (su
 
 ### Requisitos
 
-Aqui devem ser listados as condições necessárias para que a solução funcione conforme o esperado para atingir o objetivo de negócio.
 
 - A solução precisa entregar as empresas de fabricação de bebida em nível Brasil. 
 - 
@@ -107,7 +98,6 @@ Aqui devem ser listados as condições necessárias para que a solução funcion
 
 ### Fontes de dados
 
-Nesta seção precisam estar listadas todas as fontes de dados necessárias para o desenvolvimento da solução bem como toda informação necessária para seu uso. 
 
 - IRIS
 - 
@@ -115,15 +105,6 @@ Nesta seção precisam estar listadas todas as fontes de dados necessárias para
 
 
 ### Valuation
-
-Descrever qual é o retorno esperado caso o objetivo seja atingido por completo ou de maneira parcial. É importante que este retorno seja traduzido em valor monetário, mas caso isto não seja possível deve-se descrever como este retorno será medido. 
-
-Caso a memória de cálculo seja muito complexa, deixe um resumo registrado neste documento e o link para o arquivo onde o cálculo foi feito.
-
-Além da descrição acima, é importante registrar o nome das pessoas de negócio que participaram da criação da estimativa, referência para emails trocados ou alguma outra comprovação da concordância entre as partes.
-
-
-
 
 Se objetivo for atendido, provavelmente eliminariamos um custo mensal de aproximadamente 11k/mês, com a empresa terceira que faz a prospecção para nós. 
 
@@ -139,18 +120,6 @@ E-mail de negociação com a empresa terceira.
 
 # Fase L1
 
-A fase L1 deve acabar com a avaliação técnica e uma análise exploratória dos dados indicando se é possível iniciar a etapa de modelagem. Os itens desejáveis na análise exploratória são:
-
-- levantamento das tabelas de interesse;
-- validação da suficiência das variáves para o teste das hipóteses;
-- validação da suficiência do histórico / volumetrica para o teste das hipóteses;
-- especificação do critério de seleção das variáveis (quais variáveis serão usadas);
-- descrição dos dados que serão utilizados (distribuição, tipo do dado, etc);
-- registro do relacionamento entre as tabelas, caso isto tenha sido descoberto durante a EDA;
-- registro do significado de cada campo, caso isto tenha sido descoberto durante a EDA;
-- notas de eventuais reuniões feitas com o dono dos dados;
-- análise da qualidade dos dados;
-- outas análises relevantes pode ser encontradas na etapa 2 do CRISP-DM (*Data understanding*)
 
 
 ## Avaliação técnica
@@ -158,44 +127,27 @@ A fase L1 deve acabar com a avaliação técnica e uma análise exploratória do
 
 ### Hipóteses
 
-Refinamento das hipóteses definidas na etapa anterior com base na análise exploratóra e descrição das estratégias de modelagem para cada hipóteses. 
-
-Exemplos:
-
-- Problema de negócio: Quero reduzir o tempo de linha parada por problemas de válvula; 
-    - hipótese 1: construção de um modelo de regressão para previsão da vida útil da válvula; 
-    - hipótese 2: construção de um modelo de classificação para previsão de quebra ou não quebra dentro dos próximos 30 dias; 
-    - hipóteses 3: construção de um modelo de clustering, agrupando as válvulas diariamente em 2 grupos, análise posterior das características dos grupos para validar que 1 grupo é suscetível a falha e outro não)
+- Problema de negócio: Queremos aumentar a base de copackers para ter melhores opções no mercado. 
+    - hipótese 1: coleta de dados através da consulta de cnpj vai melhorar nossa visibilidade. 
+    - hipótese 2: Encontrar empresas com CNAE de envase e cruzar informações com CNAE de bebidas, pode nos mostrar alguns copackers já preparados. 
+    - hipótese 3: Visualizar em mapa a localização de um copacker x uma filial ambev, pode facilitar a tomada de decisão.  
 
 ### Métricas
 
-As métricas a serem utilizadas podem ser métricas convencionais utilizadas em problemas de regressão, classificação, agrupamento, etc (MAE, MSE, R2, F1-score, AUC, etc), ou métricas de negócio que são geradas a partir de resultados do modelo, porém é necessário ter um objetivo "técnico" bem desenhado para podermos comparar resultados).
+Aumentar em 15% a capacidade de copackers provenientes do nordeste.  
 
-Além da definição das métricas é importante, ainda nesta etapa, avaliar a métrica do estado atual ou do benchmark escolhido como referência, pois este valor será um norte para a avaliação do sucesso da POC. Caso mais de uma métrica tenha sido listada para avaliar a solução é interessante destacar qual delas será utilizar como critério de sucesso.
 
 
 ### Próximos passos
 
-Os próximos passos pode ser um plano de execussão da próxima etapa ou uma revisão dos requisitos para que a iniciativa possa se tornar viável.
 
-Exemplo de plano de execussão:
 
-- ingestão de dados
-    - contratação do serviço da empresa que irá fornecer os dados;
-    - validação da LGPD;
-    - criação de usuários para acesso ao sistema;
-    - implementação da ingestão;
-        - requer a disponibilidade de um engenheiro de dados;
-    - validação da ingestão pelo responsável técnico;
-    - validação da ingestão pelo negócio;
-        - coletar evidências da validação;
-    - deploy da ingestão;
-- implementação do modelo (requer a disponibilidade de um cientista de dados);
-    - refatoração do código da POC;
-    - treinamento do modelo com os dados do MVP;
-    - validação do modelo;
-    - deploy do modelo;
 
+- Análise dos dados
+  - Refinamento da coleta de dados
+  - validações se podemos entregar para empresa terceira
+  - Passar para empresa terceira ir atrás dos copackers e indústrias de bebidas. 
+  - Verificar se os dados foram utilizados 
 
 
 --------------------------------------------------------
@@ -212,6 +164,9 @@ Os entregáveis esperados para esta etapa são:
 - repositório criado no github;
 - documentação técnica proposta pela Iris descrevendo se o critério de sucesso foi atingido;
 - publicação do modelo no MLFlow ou equivalente;
+
+
+
 
 --------------------------------------------------------
 # Fase L3
